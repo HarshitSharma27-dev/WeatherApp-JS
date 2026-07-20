@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="main-container">
+
+        <header id="heading">
+            
+            <h1>Weather App</h1>
+
+        </header>
+
+
+        <section id="search-section">
+
+<label for="city-input">City</label>
+            <input id="city-input" type="text" placeholder="Enter city name">
+
+            <button>Search</button>
+
+        </section>
+
+
+        <section id="weather-card">
+
+            <div id="weather-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <div id="weather-info">
+                <p>Jaipur</p>
+                <p>Clear Sky</p>
+            </div>
+
+            <div id="temperature">
+                <i class="fa-solid fa-temperature-high"></i>
+                <p>34&deg;C</p>
+            </div>
+
+            <div id="weather-details">
+
+                <p>
+                    Feels Like :
+                    <span id="feels-like-value">36°C</span>
+                </p>
+
+                <p>
+                    Humidity :
+                    <span id="humidity-value">48%</span>
+                </p>
+
+                <p>
+                    Wind :
+                    <span id="wind-value">12 km/h</span>
+                </p>
+
+                <p>
+                    Cloudiness :
+                    <span id="cloudiness-value">15%</span>
+                </p>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

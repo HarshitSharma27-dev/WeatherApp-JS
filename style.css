@@ -1,0 +1,192 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  min-height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background:linear-gradient(135deg, #00b4db, #0083b0);
+
+  /* Flexbox Centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container with Hover Transition */
+#main-container {
+  width: 90%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: #ffffff;
+  color: #0f172a;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+
+  /* Transition for floating card effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#main-container:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Header */
+#heading {
+  margin-bottom: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+}
+
+/* Search Section */
+#search-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Hide label visually while keeping it accessible for screen readers */
+#search-section label {
+  display: none; 
+}
+
+/* Input Field with Focus & Transition */
+#search-section input {
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+
+  /* Smooth focus effect */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-section input:focus {
+  border-color: #0284c7;
+  box-shadow: 0 0 8px rgba(2, 132, 199, 0.3);
+}
+
+/* Search Button with Full Hover & Click Animations */
+#search-section button {
+  padding: 12px 20px;
+  background-color: #0284c7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+
+  /* Transition properties matching the hover changes */
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#search-section button:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-section button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* weather card styling*/
+
+#weather-card{
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 1rem;
+  border-radius:0.5rem;
+  box-shadow:0 4px 15px 0 rgba(0,0,0,0.16);
+  margin-top:1rem;
+  transition:transform 0.3s ease,box-shadow 0.3 ease;
+}
+#weather-card:hover{
+  /* lifts up by 6 px*/
+  transform:translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+#weather-icon{
+  font-size: 4rem;
+  color: rgb(205, 216, 2);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#weather-info p:first-child{
+  font-size:2rem;
+  font-weight:700;
+  color: #0a0909;
+  text-align: center;
+  margin:4px;
+}
+
+#weather-info p:last-child{
+  font-size:1rem;
+  font-weight:400;
+  color: #0a0909;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#temperature{
+  display: flex;
+  justify-content: center;
+  font-size:1rem;
+  gap: 5px;
+}
+
+#weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 equal columns */
+  gap: 12px;                      /* Space between the items */
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eeeeee; /* Subtle divider line above details */
+}
+
+#weather-details p {
+  background-color: #f8fafc;     /* Soft background box for each detail */
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  color: #64748b;
+  display: flex;
+  flex-direction: column;         /* Label on top, value below */
+  align-items: center;
+  gap: 4px;
+}
+
+#weather-details span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #1e293b;                 /* Makes the number/value pop out */
+}
+
+/* Responsive adjustment for extra-small mobile screens (360px and below) */
+@media (max-width: 360px) {
+  #main-container {
+    padding: 1.25rem; /* Reduces outer padding slightly so elements have more room */
+  }
+
+  #search-section {
+    gap: 6px;
+  }
+
+  #search-section button {
+    padding: 10px 14px; /* Slightly smaller button padding */
+  }
+}
